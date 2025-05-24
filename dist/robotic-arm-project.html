@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEA Simulation of FDM Process</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      animation: fadeInPage 0.8s ease-in-out;
+    }
+
+    @keyframes fadeInPage {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .image-gallery figure {
+      text-align: center;
+      margin: 0;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .image-gallery figcaption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #666;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      display: block;
+      max-width: 90vw;
+      max-height: 80vh;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+    }
+
+    .modal-caption {
+      text-align: center;
+      color: white;
+      font-style: italic;
+      font-size: 1rem;
+      margin-top: 20px;
+      position: absolute;
+      top: calc(50% + 240px);
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 90%;
+    }
+
+    .close, .prev, .next {
+      position: fixed;
+      top: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1001;
+    }
+
+    .close { right: 30px; }
+    .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+    .next { right: 30px; top: 50%; transform: translateY(-50%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Analysis of 6-DOF robot trajectory planning based on workpiece orientation</h1>
+    <section>
+      <h2>Overview</h2>
+      <p>This project explores the comprehensive modeling and analysis of a 6-DOF industrial robotic arm through Fusion 360, Blender, and MATLAB. The process includes CAD design, workspace definition via rigging, kinematic configuration using DH parameters, and joint-level path planning for trajectory accuracy.</p>
+    </section>
+<section>
+  <h2>Project description</h2>
+  <p>
+    This project involved the end-to-end design and simulation of a six-degrees-of-freedom (6-DOF) industrial robotic arm. The initial mechanical structure was developed in Fusion 360, focusing on achieving realistic proportions, motion ranges, and mounting configurations inspired by commercial robotic systems. A detailed CAD model was created with jointed segments and a gripper attachment to reflect practical use cases in automation and manufacturing.
+
+    The simulation and motion analysis phase was carried out using MATLAB and Blender. Blender was used for workspace manipulation and rigging the robot with bone constraints to simulate real-time movements. MATLAB's Robotics Toolbox enabled forward kinematics modeling using the Denavit-Hartenberg (DH) convention. The robot was defined through joint limits, transformation matrices, and link parameters, followed by workspace plotting and validation.
+
+    To test real-world applicability, two paths were simulated and analyzed. Each trajectory included position and velocity profiles for all six joints. The joint space control strategies were evaluated by observing the resulting end-effector paths, error plots, and motion fluidity. These evaluations confirmed successful simulation with minimal error deviations.
+
+    The project culminated in a comprehensive understanding of the integration between mechanical design, animation tools, and robotics simulation platforms. It bridged conceptual design with practical kinematics, fostering key skills in robotics modeling, motion planning, simulation, and software interoperability.
+  </p>
+</section>
+
+    <section>
+      <h2>Tools Used</h2>
+      <ul>
+        <li>Autodesk Fusion 360</li>
+        <li>Blender</li>
+        <li>MATLAB Robotics Toolbox</li>
+        <li>Python for data visualization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills Achieved</h2>
+      <ul>
+        <li>3D CAD Design and Modeling</li>
+        <li>Forward and Inverse Kinematics</li>
+        <li>Trajectory Planning and Path Simulation</li>
+        <li>Joint Position & Velocity Analysis</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>This robotic arm project provided hands-on experience in integrating design and simulation platforms for complete kinematic analysis. The approach enabled insight into joint performance under varying paths and built foundational expertise in robotics simulation environments.</p>
+    </section>
+
+    <section>
+      <h2>Project Images</h2>
+      <div class="image-gallery">
+        <figure>
+          <img src="assets/Project images/Technical Project images/6 DOF robot/image1.png" alt="Design of industrial robot using Fusion 360">
+          <figcaption>Design of Industrial Robot using Fusion 360</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/Project images/Technical Project images/6 DOF robot/image2.png" alt="Blender for Workspace Manipulation">
+          <figcaption>Blender for Workspace Manipulation</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/Project images/Technical Project images/6 DOF robot/image3.png" alt="DH Convention and Joints Limits to Plot Manipulator">
+          <figcaption>DH Convention and Joints Limits to Plot Manipulator</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/Project images/Technical Project images/6 DOF robot/image4.png" alt="Results of First Path">
+          <figcaption>Results of First Path</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/Project images/Technical Project images/6 DOF robot/image5.png" alt="Results of Second Path">
+          <figcaption>Results of Second Path</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</body>
+<!-- Modal Viewer -->
+  <div class="modal" id="imgModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="prev" onclick="changeImg(-1)">&#10094;</span>
+    <img class="modal-content" id="modalImg">
+    <p class="modal-caption" id="modalCaption"></p>
+    <span class="next" onclick="changeImg(1)">&#10095;</span>
+  </div>
+
+  <script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const caption = document.getElementById("modalCaption");
+    const figures = document.querySelectorAll(".image-gallery figure");
+    const images = Array.from(figures).map(f => f.querySelector("img"));
+    const captions = Array.from(figures).map(f => f.querySelector("figcaption").innerText);
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        caption.innerText = captions[index];
+        currentIndex = index;
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function changeImg(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      modalImg.src = images[currentIndex].src;
+      caption.innerText = captions[currentIndex];
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) closeModal();
+    };
+  </script>
+</body>
+</html>

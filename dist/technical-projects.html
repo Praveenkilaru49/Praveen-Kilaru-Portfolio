@@ -1,0 +1,136 @@
+<style>
+  .project-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+
+  .project-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .project-card p {
+    margin-top: 10px;
+    color: #555;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    color: white;
+  }
+
+  .badge.mechanical {
+    background-color: #f57c00;
+  }
+
+  .badge.simulation {
+    background-color: #2e7d32;
+  }
+
+  .badge.tbd {
+    background-color: #616161;
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+
+<body>
+<section class="project-section">
+  <h2 class="project-heading">Technical Projects</h2>
+
+  <div class="project-grid">
+    <div class="project-card fade-in">
+      <h3>
+    
+          1. Design and Development of Tensile Testing Machine
+        </a>
+        <span class="badge mechanical">Mechanical</span>
+      </h3>
+      <p>A cost-effective tensile testing machine developed using SolidWorks, Arduino, and 3D printing to analyze the stress-strain behavior of materials.</p>
+       <a href="tensile-testing-project.html">View Details</a>
+    </div>
+
+  <div class="project-card fade-in" style="animation-delay: 0.1s;">
+    <h3>2. Design and Simulation of FDM Process <span class="badge simulation">Simulation</span></h3>
+    <p>A thermal analysis of fused deposition modeling (FDM) using 316SS & AlSi10Mg to evaluate performance during additive manufacturing.</p>
+    <a href="fdm-project.html">View Details</a>
+  </div>
+</a>
+
+<div class="project-card fade-in" style="animation-delay: 0.2s;">
+  <h3>3. Analysis of 6-DOF robot trajectory planning based on workpiece orientation  <span class="badge mechanical">Mechanical</span></h3>
+  <p>Developed a 6-DOF robotic arm using Fusion 360 and simulated joint motion in MATLAB and Blender with DH parameters, joint constraints, and velocity/position profiles.</p>
+  <a href="robotic-arm-project.html" class="view-details-link">View Details</a>
+</div>
+
+
+
+<div class="project-card fade-in" style="animation-delay: 0.3s;">
+  <h3>
+    4. Thermal performance of organic phase change  material  for cooling of buildings
+    <span class="badge simulation">Simulation</span>
+  </h3>
+  <p>
+    Lauric Acid-based PCM analysis for passive building cooling.
+  </p>
+  <a href="technical-project-4.html" class="btn">View details</a>
+</div>
+
+<div class="project-card fade-in" style="animation-delay: 0.4s;">
+  <h3>
+    5. Analysis of Inverted Pendulum on Cart using PID Control
+    <span class="badge dynamics">Dynamics</span>
+  </h3>
+  <p>
+    Simulated the stabilization of an inverted pendulum system using PID controller in MATLAB.
+  </p>
+  <a href="inverted-pendulum-project.html">View Details</a>
+</div>
+</section>
+</body>
+

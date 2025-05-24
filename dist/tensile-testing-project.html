@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tensile Testing Machine Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+ body {
+  opacity: 0;
+  animation: fadeInPage 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    body {
+      font-family: 'Muli', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    ul {
+      padding-left: 20px;
+    }
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-container {
+  text-align: center;
+  max-width: 300px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-container p {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #444;
+}
+  </style>
+
+</head>
+<body>
+  <h1>Design and Development of Tensile Testing Machine</h1>
+
+  <section>
+    <h2>Project Summary</h2>
+    <p>
+      This project focuses on the design and development of a cost-effective tensile testing machine using SolidWorks, Arduino UNO, and a 3D-printed frame. The machine is built to test the tensile strength of 3D-printed PLA and ABS samples, simulating the basic functionality of commercial UTM machines for academic and research purposes.
+    </p>
+  </section>
+
+  <section>
+    <h2>Project Description</h2>
+    <p>
+      The tensile testing machine was designed in SolidWorks with a focus on modularity and manufacturability using PLA and ABS materials. The main components include:
+    </p>
+    <ul>
+      <li>5kg Load Cell and HX711 for force sensing</li>
+      <li>Arduino UNO for microcontroller-based control and data acquisition</li>
+      <li>NEMA 17 stepper motor for linear actuation of the tensile fixture</li>
+      <li>3D printed structural parts and clamps for easy customization</li>
+    </ul>
+    <p>
+      The project also involved programming the Arduino to read data from HX711 and calculating force in real-time, while controlling motor speed for uniform strain application. The resulting stress-strain behavior was validated by plotting the acquired data.
+    </p>
+  </section>
+
+  <section>
+    <h2>Tools Used</h2>
+    <ul>
+      <li>SolidWorks (3D modeling)</li>
+      <li>Arduino IDE (firmware and control)</li>
+      <li>HX711 amplifier, Load Cell, NEMA 17 stepper motor</li>
+      <li>Fusion360 for slicing and printing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills Gained</h2>
+    <ul>
+      <li>Mechanical Design and Assembly</li>
+      <li>Embedded Systems Programming</li>
+      <li>Sensor Calibration and Data Acquisition</li>
+      <li>Stress-Strain analysis and testing methodology</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Conclusion</h2>
+    <p>
+      The project successfully demonstrated the feasibility of building a desktop tensile testing machine for basic material strength evaluation. The machine is low-cost, customizable, and can be used in academic labs for hands-on materials testing experience.
+    </p>
+  </section>
+
+  <section>
+  <h2>Project Images</h2>
+  <div class="image-row">
+    <div class="image-container">
+      <img src="assets/Project images/Technical Project images/Tensile testing images/image1.png" alt="CAD Model">
+      <p>CAD Model (SolidWorks)</p>
+    </div>
+    <div class="image-container">
+      <img src="assets/Project images/Technical Project images/Tensile testing images/image2.png" alt="Arduino Circuit">
+      <p>Arduino Circuit Setup</p>
+    </div>
+    <div class="image-container">
+      <img src="assets/Project images/Technical Project images/Tensile testing images/image3.png" alt="Working Prototype">
+      <p>Working Prototype (Assembled View)</p>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEA Simulation of FDM Process</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      animation: fadeInPage 0.8s ease-in-out;
+    }
+
+    @keyframes fadeInPage {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .image-gallery figure {
+      text-align: center;
+      margin: 0;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .image-gallery figcaption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #666;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      display: block;
+      max-width: 90vw;
+      max-height: 80vh;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+    }
+
+    .modal-caption {
+      text-align: center;
+      color: white;
+      font-style: italic;
+      font-size: 1rem;
+      margin-top: 20px;
+      position: absolute;
+      top: calc(50% + 240px);
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 90%;
+    }
+
+    .close, .prev, .next {
+      position: fixed;
+      top: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1001;
+    }
+
+    .close { right: 30px; }
+    .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+    .next { right: 30px; top: 50%; transform: translateY(-50%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Analysis of Inverted Pendulum on Cart using PID Control</h1>
+
+    <section>
+      <h2>Overview</h2>
+      <p>This project explores the stability and control of an inverted pendulum mounted on a cart using a Proportional-Integral-Derivative (PID) controller implemented in MATLAB. It provides a practical application of control systems and dynamics for real-time system stabilization.</p>
+    </section>
+
+    <section>
+      <h2>Project Description</h2>
+      <p>
+        The inverted pendulum system is a classical benchmark problem for control system design. In this project, a nonlinear dynamic model of a pendulum mounted on a cart was developed using Newtonian mechanics. The aim was to stabilize the pendulum in the upright position by applying a control force to the cart.
+      </p>
+      <p>
+        The PID controller was tuned to minimize position error and suppress oscillations. MATLAB Simulink was used to simulate the system response for both the cart position and the pendulum angle. The simulation shows that with proper tuning, the controller is capable of quickly stabilizing the pendulum after small disturbances.
+      </p>
+      <p>
+        This study demonstrates practical control engineering concepts, including stability analysis, real-time response evaluation, and disturbance rejection. The insights gained have applications in robotics, aerospace, and autonomous vehicle design.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tools Used</h2>
+      <ul>
+        <li>MATLAB & Simulink</li>
+        <li>Control Systems Toolbox</li>
+        <li>Differential Equation Modeling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills Achieved</h2>
+      <ul>
+        <li>PID Controller Design</li>
+        <li>MATLAB Simulation</li>
+        <li>Nonlinear Dynamic Modeling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>The PID-controlled inverted pendulum model effectively stabilizes the system. The simulation results reflect that proper tuning of PID parameters ensures optimal performance and robustness against disturbances.</p>
+    </section>
+
+    <section>
+      <h2>Simulation Images</h2>
+      <div class="image-gallery">
+        <figure onclick="openModal(0)">
+          <img src="assets/Project images/Technical Project images/pendulum project/image1.png" alt="Inverted Pendulum on Cart Schematic">
+          <figcaption>Inverted Pendulum on a Cart</figcaption>
+        </figure>
+        <figure onclick="openModal(1)">
+          <img src="assets/Project images/Technical Project images/pendulum project/image2.png" alt="Cart Position vs Time">
+          <figcaption>Cart Velocity vs. Time (PID Control)</figcaption>
+        </figure>
+        <figure onclick="openModal(2)">
+          <img src="assets/Project images/Technical Project images/pendulum project/image3.png" alt="Pendulum Angle vs Time">
+          <figcaption>Pendulum Angle vs. Time (PID Control)</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal Viewer -->
+  <div class="modal" id="imgModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="prev" onclick="changeImg(-1)">&#10094;</span>
+    <img class="modal-content" id="modalImg">
+    <p class="modal-caption" id="modalCaption"></p>
+    <span class="next" onclick="changeImg(1)">&#10095;</span>
+  </div>
+
+  <script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const caption = document.getElementById("modalCaption");
+    const figures = document.querySelectorAll(".image-gallery figure");
+    const images = Array.from(figures).map(f => f.querySelector("img"));
+    const captions = Array.from(figures).map(f => f.querySelector("figcaption").innerText);
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        caption.innerText = captions[index];
+        currentIndex = index;
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function changeImg(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      modalImg.src = images[currentIndex].src;
+      caption.innerText = captions[currentIndex];
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) closeModal();
+    };
+  </script>
+</body>
+</html>

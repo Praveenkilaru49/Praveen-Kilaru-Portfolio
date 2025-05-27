@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Skills | Praveen Kilaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f7fa;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 800;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.2);
+    }
+
+    .resume-section-content {
+      background: white;
+      padding: 50px;
+      max-width: 1000px;
+      margin: 60px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .skills-category {
+      margin-bottom: 40px;
+    }
+
+    .skills-category h4 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      color: #0d47a1;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .skill-icon {
+      background: #e3f2fd;
+      border-radius: 12px;
+      padding: 10px 14px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 130px;
+    }
+
+    .skill-icon:hover {
+      transform: scale(1.05);
+      background-color: #bbdefb;
+    }
+
+    .skill-icon img {
+      height: 30px;
+      margin-bottom: 6px;
+    }
+
+    .skill-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #0d47a1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
+  <section class="resume-section-content" data-aos="fade-up">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-category">
+      <h4><i class="fas fa-drafting-compass"></i> Design & CAD Tools</h4>
+      <div class="skills-grid">
+        <div class="skill-icon"><img src="assets/img/skills/solidworks.png" alt="SolidWorks" /><span class="skill-name">SolidWorks</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/autocad.png" alt="AutoCAD" /><span class="skill-name">AutoCAD</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/fusion360.png" alt="Fusion 360" /><span class="skill-name">Fusion 360</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/catia.png" alt="CATIA" /><span class="skill-name">CATIA V5</span></div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h4><i class="fas fa-microchip"></i> Simulation & Analysis</h4>
+      <div class="skills-grid">
+        <div class="skill-icon"><img src="assets/img/skills/comsol-resized.webp" alt="COMSOL" /><span class="skill-name">COMSOL</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/ansys.png" alt="ANSYS" /><span class="skill-name">ANSYS</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/1006540.webp" alt="Control Systems" /><span class="skill-name">Control Systems</span></div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h4><i class="fas fa-chart-line"></i> Manufacturing & Data</h4>
+      <div class="skills-grid">
+        <div class="skill-icon"><img src="assets/img/skills/minitab.png" alt="Minitab" /><span class="skill-name">Minitab</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/Jmp.svg" alt="JMP" /><span class="skill-name">JMP</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/six sigma.jpg" alt="Six Sigma" /><span class="skill-name">Lean Six Sigma</span></div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h4><i class="fas fa-code"></i> Programming & Robotics</h4>
+      <div class="skills-grid">
+        <div class="skill-icon"><img src="assets/img/skills/matlab.png" alt="MATLAB" /><span class="skill-name">MATLAB</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/python.png" alt="Python" /><span class="skill-name">Python (Basic)</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/5969393.png" alt="Arduino" /><span class="skill-name">Arduino (C++)</span></div>
+        <div class="skill-icon"><img src="assets/img/skills/blenderlogo.png" alt="Blender" /><span class="skill-name">Blender</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

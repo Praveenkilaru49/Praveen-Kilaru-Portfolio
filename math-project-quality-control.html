@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design and Development of Tensile Testing Machine</title>
+  <title>Control Chart Techniques for AR Process</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -132,7 +132,7 @@
 </head>
 <body>
   <header>
-    <div class="logo"><div class=""></div> Kilaru Praveen</div>
+    <div class="logo"><div class=""></div> Praveen Kilaru</div>
     <nav>
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
       <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
@@ -145,70 +145,54 @@
   </header>
 
   <main>
-    <h1 data-aos="fade-down">🧪 Design and Development of Tensile Testing Machine</h1>
+    <h1 data-aos="fade-down">📊 Control Chart Techniques for an Autoregressive Process</h1>
 
     <section class="gallery" data-aos="fade-up">
-      <figure>
-        <img src="assets/Project images/Technical Project images/Tensile testing images/image1.png" alt="CAD Model">
-        <figcaption>CAD Model (SolidWorks)</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/Project images/Technical Project images/Tensile testing images/image2.png" alt="Arduino Circuit">
-        <figcaption>Arduino Circuit Setup</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/Project images/Technical Project images/Tensile testing images/image3.png" alt="Working Prototype">
-        <figcaption>Working Prototype (Assembled View)</figcaption>
-      </figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image1.png" alt="Temperature"><figcaption>Figure 1: Time Series Plot of Temperature</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image2.png" alt="I-Chart"><figcaption>Figure 2: I-Chart and EWMA Chart</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image3.png" alt="EWMA Residuals"><figcaption>Figure 3: EWMA of ARIMA Residuals</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image4.png" alt="Viscosity Series"><figcaption>Figure 4: Viscosity – Real World Data</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image5.png" alt="ACF PACF"><figcaption>Figure 5: ACF/PACF of Viscosity</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image6.png" alt="Viscosity Residuals"><figcaption>Figure 6: EWMA of Viscosity Residuals</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 3/image7.png" alt="T2 Chart"><figcaption>Figure 7: Hotelling T² Chart</figcaption></figure>
     </section>
 
     <section data-aos="fade-up">
-      <h2>Project Summary</h2>
-      <p>This project focuses on the design and development of a cost-effective tensile testing machine using SolidWorks, Arduino UNO, and a 3D-printed frame. It tests tensile strength of 3D-printed PLA and ABS samples, replicating basic UTM functionality for educational use.</p>
+      <h2>Overview</h2>
+      <p>This project addresses quality control challenges in autocorrelated industrial data using EWMA and Hotelling T² charts alongside ARIMA modeling to monitor both univariate and multivariate processes effectively.</p>
     </section>
 
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" data-aos-delay="100">
       <h2>Project Description</h2>
-      <p>Designed for modularity and easy manufacturing using PLA/ABS, the machine includes:</p>
-      <ul>
-        <li>5kg Load Cell with HX711 for force sensing</li>
-        <li>Arduino UNO for control and data acquisition</li>
-        <li>NEMA 17 stepper motor for fixture motion</li>
-        <li>3D printed structural and clamping components</li>
-      </ul>
-      <p>The Arduino was programmed for real-time force measurement and consistent strain control. The results were validated by plotting stress-strain behavior of tested specimens.</p>
+      <p>Traditional control charts assume independent observations, but many processes have time-dependent data. This project applies ARIMA modeling to clean such data, and then uses EWMA and Hotelling T² charts to provide robust monitoring with reduced false alarms.</p>
+      <p>Two datasets were used: a toy temperature set and real chemical process data (viscosity/efficiency). The process includes plotting ACF/PACF, fitting ARIMA, extracting residuals, and generating improved control charts for insight.</p>
     </section>
 
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" data-aos-delay="200">
       <h2>Tools Used</h2>
       <ul>
-        <li>SolidWorks (CAD modeling)</li>
-        <li>Arduino IDE (programming)</li>
-        <li>HX711, Load Cell, NEMA 17 Motor</li>
-        <li>Fusion360 for 3D printing</li>
+        <li>R & RStudio</li>
+        <li>ARIMA (Box-Jenkins)</li>
+        <li>EWMA & Hotelling T² Control Charts</li>
+        <li>Time Series Diagnostics</li>
       </ul>
     </section>
 
-    <section data-aos="fade-up">
-      <h2>Skills Gained</h2>
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Skills Achieved</h2>
       <ul>
-        <li>Mechanical Design & Assembly</li>
-        <li>Embedded Systems Programming</li>
-        <li>Sensor Calibration & Data Logging</li>
-        <li>Stress-Strain Testing Methodology</li>
+        <li>Advanced SPC</li>
+        <li>Forecasting with ARIMA</li>
+        <li>Multivariate Process Monitoring</li>
+        <li>False Alarm Reduction</li>
       </ul>
     </section>
 
-    <section data-aos="fade-up">
-      <h2>Conclusion</h2>
-      <p>The low-cost machine successfully enables basic material strength testing in academic settings. Its customizable design is ideal for hands-on engineering education and prototyping labs.</p>
-    </section>
-
-    <a href="technical-projects.html" class="back-link"><i class="fas fa-arrow-left"></i> View All Technical Projects</a>
+    <a href="math-projects.html" class="back-link"><i class="fas fa-arrow-left"></i> View All Math Projects</a>
   </main>
 
   <footer>
-    © 2025 Praveen kilaru. All rights reserved.
+    © 2025 Praveen Kilaru. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

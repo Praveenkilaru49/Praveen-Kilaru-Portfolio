@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Praveen Kilaru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f7fa;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 800;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.2);
+    }
+
+    .resume-section-content {
+      background: white;
+      padding: 50px;
+      max-width: 1000px;
+      margin: 60px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .experience-entry {
+      border-left: 3px solid #2c3e50;
+      padding-left: 20px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .experience-entry::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 5px;
+      height: 12px;
+      width: 12px;
+      background: #2c3e50;
+      border-radius: 50%;
+    }
+
+    .experience-entry h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    .company-location {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .date {
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
+  <section class="resume-section-content">
+    <h2>Experience</h2>
+
+    <div class="experience-entry" data-aos="fade-up">
+      <h3>Design Engineer Intern</h3>
+      <div class="company-location">Shoptaki, Tempe, AZ (Remote)</div>
+      <div class="date">May 2024 – Aug 2024</div>
+      <ul>
+        <li>Designed 3D models for EV chargers using SolidWorks, improving design accuracy and technical compliance.</li>
+        <li>Applied advanced surface modeling and FEM analysis to ensure structural integrity and optimize materials.</li>
+        <li>Produced detailed technical drawings, increasing production accuracy by 25% and reducing rework.</li>
+      </ul>
+    </div>
+
+    <div class="experience-entry" data-aos="fade-up" data-aos-delay="100">
+      <h3>Supervisor – Concessions & Food Safety</h3>
+      <div class="company-location">Sodexo @ Arizona State University Stadium</div>
+      <div class="date">Aug 2023 – May 2025</div>
+      <ul>
+        <li>Led food concession operations ensuring safety, hygiene, and high-volume service efficiency.</li>
+        <li>Supervised staff and managed event-day logistics in a fast-paced stadium environment.</li>
+      </ul>
+    </div>
+
+    <div class="experience-entry" data-aos="fade-up" data-aos-delay="200">
+      <h3>CNC Machine Operator</h3>
+      <div class="company-location">Kusalava International Pvt Ltd, Vijayawada, India</div>
+      <div class="date">May 2019 – Nov 2019</div>
+      <ul>
+        <li>Operated precision CNC machinery ensuring accuracy to design specifications with 99.8% quality rate.</li>
+        <li>Optimized calibration and workflows, boosting production output by 15%.</li>
+        <li>Maintained detailed production logs and supported preventative maintenance activities.</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

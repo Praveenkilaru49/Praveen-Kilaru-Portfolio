@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSMC SiP Research | Praveen Kilaru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f7f9fc, #e3e9f0);
+      color: #2c3e50;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #2c3e50;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background-color: #4dd0e1;
+      border-radius: 50%;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.15);
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 80px 30px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #12355b;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #12355b;
+      margin-top: 60px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #ccc;
+      margin: 60px 0;
+    }
+
+    figure {
+      margin: 20px 0 60px;
+      text-align: center;
+    }
+
+    figure img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    figure figcaption {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #666;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 60px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: #12355b;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #4dd0e1;
+    }
+
+    footer {
+      background: #eaeff5;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #666;
+      border-top: 1px solid #ccc;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><div class=""></div> Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 data-aos="fade-down">📦 TSMC SiP & 3D Packaging Research</h1>
+
+    <figure data-aos="fade-up">
+      <img src="assets/Project images/Research project images/project 1/image1.png" alt="Integration Diagram">
+      <figcaption>Figure: Heterogeneous Integration Architecture Overview</figcaption>
+    </figure>
+
+    <section data-aos="fade-up">
+      <h2>Overview</h2>
+      <p>
+        This research explores the role of TSMC's advanced packaging technologies—System in Package (SiP), SoIC, and CoWoS—in driving innovation across AI, mobile, IoT, and high-performance computing domains.
+      </p>
+    </section>
+
+    <hr />
+
+    <section data-aos="fade-up" data-aos-delay="100">
+      <h2>Project Description</h2>
+      <p>
+        As Moore’s Law slows and conventional transistor scaling nears physical limits, chipmakers have turned to heterogeneous integration and System in Package (SiP) technologies to maintain performance growth. This project investigates how TSMC’s SoIC and CoWoS packaging architectures enable system-level integration by connecting diverse dies (processors, memory, RF, etc.) through microbumps and TSVs.
+      </p>
+      <p>
+        Benefits include improved bandwidth, compact form factors, and lower latency. We also address key challenges like thermal management, warpage control, and testing complexity. The study includes a detailed breakdown of TSMC's 3DFabric™ portfolio—CoWoS-S, InFO, and SoIC-X—and real-world applications in AI, networking, and automotive chipsets.
+      </p>
+    </section>
+
+    <hr />
+
+    <section data-aos="fade-up" data-aos-delay="200">
+      <h2>Tools Used</h2>
+      <ul>
+        <li>TSMC Technical Briefs & Whitepapers</li>
+        <li>Advanced Packaging Literature Reviews</li>
+        <li>Architecture Block Diagrams</li>
+        <li>Google Slides for Technical Presentations</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Skills Achieved</h2>
+      <ul>
+        <li>Advanced Packaging Technology Research</li>
+        <li>Architecture-Level System Integration</li>
+        <li>Semiconductor Roadmapping</li>
+        <li>Industry-Level Technical Communication</li>
+      </ul>
+    </section>
+
+    <figure data-aos="fade-up" data-aos-delay="400">
+      <img src="assets/Project images/Research project images/project 1/image2.png" alt="SiP Exploded View" />
+      <figcaption>Figure: System in Package (SiP) Structure with Integrated Components</figcaption>
+    </figure>
+
+    <figure data-aos="fade-up" data-aos-delay="500">
+      <img src="assets/Project images/Research project images/project 1/image3.png" alt="3DFabric Portfolio" />
+      <figcaption>Figure: TSMC 3DFabric Portfolio Including SoIC and CoWoS</figcaption>
+    </figure>
+
+    <a href="research-projects.html" class="back-link">&larr; Back to Research Projects</a>
+  </main>
+
+  <footer>
+    © 2025 Praveen Kilaru. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+  </script>
+</body>
+</html>

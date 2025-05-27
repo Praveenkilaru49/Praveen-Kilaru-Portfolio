@@ -1,297 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Praveen Kilaru</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-     src="assets/img/profile/profile.jpeg"
-     alt="Profile Picture"
-     style="width: 150px; height: 150px; object-fit: cover;" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praveen Kilaru</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#summary">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Engineering Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education </a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience </a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Technical Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards & Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="assets/Resume/Praveen_resume_M.pdf" target="_blank">Resume</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="summary">
-  <div class="resume-section-content">
-    <h1 class="mb-0">
-      Praveen
-      <span class="text-primary">Kilaru</span>
-    </h1>
-    <div class="subheading mb-5">
-      Tempe, Arizona · praveenkilaru49@gmail.com ·
-      <a href="https://www.linkedin.com/in/praveen-kilaru-545716222/">LinkedIn</a>
-    </div>
-    <p class="lead mb-5">
-      I am a passionate Mechanical Engineer with hands-on experience in CAD design, process optimization, prototyping, and FEA.
-      I’ve worked with SolidWorks, AutoCAD, Arduino systems, and thermal analysis tools to develop efficient, testable mechanical solutions.
-      My academic and internship projects reflect a strong foundation in engineering principles and practical implementation.
-    </p>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #2c3e50;
+      background: #f4f7fa;
+      scroll-behavior: smooth;
+    }
 
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a class="social-icon" href="https://www.linkedin.com/in/praveen-kilaru-545716222/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a class="social-icon" href="https://github.com/praveenkilaru49" target="_blank"><i class="fab fa-github"></i></a>
-      <a class="social-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a class="social-icon" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 800;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.2);
+    }
+
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 60px 40px;
+      gap: 50px;
+    }
+
+    .hero-left img {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-left img:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-right {
+      max-width: 600px;
+    }
+
+    .hero-right h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      animation: slideFromTop 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .hero-right h3 span {
+      font-size: 1.1rem;
+      border-right: 3px solid #4dd0e1;
+      animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .hero-right p {
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #333;
+      font-size: 1rem;
+      animation: slideFromBottom 1s ease-out 0.6s forwards;
+      opacity: 0;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+      display: flex;
+      gap: 25px;
+    }
+
+    .social-icons a {
+      font-size: 1.7rem;
+      color: #2c3e50;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #4dd0e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #666;
+      background: #eaeff5;
+      border-top: 1px solid #ccc;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #4dd0e1; }
+    }
+
+    @keyframes slideFromTop {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideFromBottom {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" download><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-left">
+      <img src="Praveen.jpg" alt="Praveen Kilaru Profile" />
     </div>
-  </div>
+    <div class="hero-right">
+      <h1>Hi, I'm Praveen</h1>
+      <h3><span>Mechanical Engineer | Manufacturing Expert | Innovator</span></h3>
+      <p>
+        I’m Praveen Kilaru, a Mechanical Engineer driven by curiosity and a passion for solving real-world challenges. My work bridges precision manufacturing, robotics, and simulation—with hands-on experience in CNC machining, FEA, and design tools like SolidWorks, MATLAB, and ANSYS.
+        <br /><br />
+        Beyond the technical, I’m an analytical thinker and lifelong learner who thrives in fast-paced environments. I enjoy turning ideas into tangible results—whether it’s optimizing a process or building something from scratch. When I’m not engineering solutions, you’ll find me exploring tech trends, sharing ideas, or working on side projects that push boundaries.
+      </p>
+      <div class="social-icons">
+        <a href="mailto:praveenkilaru49@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/praveen-kilaru-545716222/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/praveenkilaru49" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
   </section>
-  <section class="resume-section" id="projects">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Engineering Projects</h2>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 30px;">
-
-      <!-- Research Projects -->
-<a href="research-projects.html" style="text-decoration: none; color: inherit; flex: 1 1 300px;">
-  <div style="
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'" 
-     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'">
-
-    <h4 class="text-primary" style="margin-bottom: 10px;">Research Projects</h4>
-    <p class="text-muted" style="font-size: 0.95rem;">
-      Click to explore simulations, modeling, and experimental research work.
-    </p>
-  </div>
-</a>
-
-
-      <!-- Math Projects -->
-<a href="math-projects.html" style="text-decoration: none; color: inherit; flex: 1 1 300px;">
-  <div style="
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'" 
-     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'">
-
-    <h4 class="text-primary" style="margin-bottom: 10px;">Math Projects</h4>
-    <p class="text-muted" style="font-size: 0.95rem;">
-      Click to explore mathematical modeling, analysis, and calculation projects.
-    </p>
-  </div>
-</a>
-
-
-      <!-- Technical Projects -->
-<a href="technical-projects.html" style="text-decoration: none; color: inherit; flex: 1 1 300px;">
-  <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer;  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'" 
-     onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'">
-    <h4 class="text-primary">Technical Projects</h4>
-    <p class="text-muted">Click to explore engineering builds, prototypes, and technical designs.</p>
-  </div>
-</a>
-  </div>
-</section>
-<section class="resume-section" id="education">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Education</h2>
-
-    <!-- Master's Degree -->
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-      <div class="flex-grow-1">
-        <h3 class="mb-0">Arizona State University</h3>
-        <div class="subheading mb-1">Master of Science – Mechanical Engineering</div>
-        <div>Ira A. Fulton School of Engineering</div>
-        <p>GPA: 3.56</p>
-      </div>
-      <div class="flex-shrink-0">
-        <span class="text-primary">August 2023 – May 2025</span>
-      </div>
-    </div>
-
-    <!-- Bachelor's Degree -->
-    <div class="d-flex flex-column flex-md-row justify-content-between">
-      <div class="flex-grow-1">
-        <h3 class="mb-0">Lakireddy Bali Reddy College of Engineering</h3>
-        <div class="subheading mb-1">Bachelor of Technology – Mechanical Engineering</div>
-        <p>GPA: 3.7</p>
-      </div>
-      <div class="flex-shrink-0">
-        <span class="text-primary">August 2020 – May 2023</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-           <section class="resume-section" id="experience">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Experience</h2>
-
-    <!-- Design Engineer Intern -->
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-      <div class="flex-grow-1">
-        <h3 class="mb-0">Design Engineer Intern</h3>
-        <div class="subheading mb-1">Shoptaki, Tempe, AZ (Remote)</div>
-        <ul>
-          <li>Designed 3D models for EV chargers using SolidWorks, improving design accuracy and technical compliance.</li>
-          <li>Applied advanced surface modeling and FEM analysis to ensure structural integrity and optimize materials.</li>
-          <li>Produced detailed technical drawings, increasing production accuracy by 25% and reducing rework.</li>
-        </ul>
-      </div>
-      <div class="flex-shrink-0"><span class="text-primary">May 2024 – Aug 2024</span></div>
-    </div>
-
-    <!-- Sodexo Supervisor -->
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-      <div class="flex-grow-1">
-        <h3 class="mb-0">Supervisor – Concessions & Food Safety</h3>
-        <div class="subheading mb-1">Sodexo @ Arizona State University Stadium</div>
-        <ul>
-          <li>Led food concession operations ensuring safety, hygiene, and high-volume service efficiency.</li>
-          <li>Supervised staff and managed event-day logistics in a fast-paced stadium environment.</li>
-        </ul>
-      </div>
-      <div class="flex-shrink-0"><span class="text-primary">Aug 2023 – May 2025</span></div>
-    </div>
-
-    <!-- CNC Machine Operator -->
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-      <div class="flex-grow-1">
-        <h3 class="mb-0">CNC Machine Operator</h3>
-        <div class="subheading mb-1">Kusalava International Pvt Ltd, Vijayawada, India</div>
-        <ul>
-          <li>Operated precision CNC machinery ensuring accuracy to design specifications with 99.8% quality rate.</li>
-          <li>Optimized calibration and workflows, boosting production output by 15%.</li>
-          <li>Maintained detailed production logs and supported preventative maintenance activities.</li>
-        </ul>
-      </div>
-      <div class="flex-shrink-0"><span class="text-primary">May 2019 – Nov 2019</span></div>
-    </div>
-
-  </div>
-</section>
-
-           <section class="resume-section" id="skills">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Technical Skills</h2>
-    <div class="subheading mb-3">Design & Analysis Tools</div>
-    <ul class="fa-ul mb-4">
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>SolidWorks</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>AutoCAD</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>ANSYS (Static, Thermal, and FEA modules)</li>
-    </ul>
-
-    <div class="subheading mb-3">Programming & Tools</div>
-    <ul class="fa-ul mb-4">
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Arduino (C++)</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>MATLAB</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Python (Basic)</li>
-    </ul>
-
-    <div class="subheading mb-3">Simulation & Controls</div>
-    <ul class="fa-ul mb-4">
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Control Systems Modeling</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Finite Element Analysis (FEA)</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Thermal Simulation</li>
-
-<div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: center; margin-top: 40px;">
-
-  <div style="text-align: center;">
-    <img src="assets/img/skills/solidworks.png" alt="SolidWorks" style="height: 50px;">
-    <p style="margin-top: 8px;">SolidWorks</p>
-  </div>
-
-  <div style="text-align: center; margin: 40px;">
-    <img src="assets/img/skills/ansys.png" alt="ANSYS" style="height: 50px;">
-    <p style="margin-top: 8px;">ANSYS</p>
-  </div>
-
-  <div style="text-align: center; margin: 40px;">
-    <img src="assets/img/skills/autocad.png" alt="AutoCAD" style="height: 50px;">
-    <p style="margin-top: 8px;">AutoCAD</p>
-  </div>
-
-  <div style="text-align: center; margin: 40px;">
-    <img src="assets/img/skills/matlab.png" alt="MATLAB" style="height: 50px;">
-    <p style="margin-top: 8px;">MATLAB</p>
-  </div>
-
-  <div style="text-align: center; margin: 40px;">
-    <img src="assets/img/skills/python.png" alt="Python" style="height: 50px;">
-    <p style="margin-top: 8px;">Python</p>
-  </div>
-</div>
-
-</section>
-
-
-           <section class="resume-section" id="awards">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Awards & Interests</h2>
-
-    <div class="mb-4">
-      <h4 class="mb-2">Awards & Achievements</h4>
-      <ul>
-        <li>Disaster Management Award – UAE Recognition for COVID Rapid Response Team (2021)</li>
-        <li>Finalist – APSCHE Excellence Awards (2022) – Community Service Category</li>
-        <li>Certificate of Excellence – ISSC for Inclusive Leadership and Service (2024)</li>
-        <li>Ocean Cleanup Drive Lead – State Government Recognition with Bhumi Organization (2021)</li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="mb-2">Interests</h4>
-      <ul>
-        <li>Robotics and Mechatronics</li>
-        <li>3D Printing & Rapid Prototyping</li>
-        <li>DIY Electronics Projects</li>
-        <li>Formula 1 and Technical Documentaries</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="resume-section" id="resume">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Resume</h2>
-    <p>You can view or download my complete resume using the button below:</p>
-    <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank" class="btn btn-primary">
-      <i class="fas fa-file-pdf"></i> View My Resume (PDF)
-    </a>
-  </div>
-</section>
-
-
+  <footer>
+    © 2025 Praveen Kilaru. All rights reserved.
+  </footer>
+</body>
+</html>

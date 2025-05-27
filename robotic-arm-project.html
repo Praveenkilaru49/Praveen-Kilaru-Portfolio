@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FEA Simulation of FDM Process</title>
+  <title>6-DOF Robot Trajectory Planning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
+    * { box-sizing: border-box; }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f7fa;
+      color: #2c3e50;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
       animation: fadeInPage 0.8s ease-in-out;
     }
 
@@ -18,23 +22,76 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    header {
+      background: #2c3e50;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      color: white;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background-color: #4dd0e1;
+      border-radius: 50%;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.2);
+    }
+
     .container {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
-    h1, h2 {
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
       text-align: center;
-      color: #2c3e50;
+      color: #12355b;
+      margin-bottom: 40px;
     }
 
-    section {
-      background: #fff;
-      border-radius: 10px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #12355b;
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.7;
     }
 
     ul {
@@ -45,7 +102,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-bottom: 40px;
     }
 
     .image-gallery figure {
@@ -64,6 +121,34 @@
       margin-top: 8px;
       font-style: italic;
       color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #12355b;
+      text-decoration: none;
+      border: 2px solid #4dd0e1;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: #4dd0e1;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 40px 10px;
+      color: #888;
+      background-color: #eaeff5;
+      margin-top: 80px;
     }
 
     .modal {
@@ -118,78 +203,86 @@
   </style>
 </head>
 <body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><div class=""></div> Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <h1>Analysis of 6-DOF robot trajectory planning based on workpiece orientation</h1>
-    <section>
-      <h2>Overview</h2>
-      <p>This project explores the comprehensive modeling and analysis of a 6-DOF industrial robotic arm through Fusion 360, Blender, and MATLAB. The process includes CAD design, workspace definition via rigging, kinematic configuration using DH parameters, and joint-level path planning for trajectory accuracy.</p>
-    </section>
-<section>
-  <h2>Project description</h2>
-  <p>
-    This project involved the end-to-end design and simulation of a six-degrees-of-freedom (6-DOF) industrial robotic arm. The initial mechanical structure was developed in Fusion 360, focusing on achieving realistic proportions, motion ranges, and mounting configurations inspired by commercial robotic systems. A detailed CAD model was created with jointed segments and a gripper attachment to reflect practical use cases in automation and manufacturing.
+    <h1>🤖 6-DOF Robot Trajectory Planning Based on Workpiece Orientation</h1>
 
-    The simulation and motion analysis phase was carried out using MATLAB and Blender. Blender was used for workspace manipulation and rigging the robot with bone constraints to simulate real-time movements. MATLAB's Robotics Toolbox enabled forward kinematics modeling using the Denavit-Hartenberg (DH) convention. The robot was defined through joint limits, transformation matrices, and link parameters, followed by workspace plotting and validation.
+    <div class="image-gallery">
+      <figure>
+        <img src="assets/Project images/Technical Project images/6 DOF robot/image1.png" alt="Fusion 360 Robot Design">
+        <figcaption>Design of Industrial Robot using Fusion 360</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/Project images/Technical Project images/6 DOF robot/image2.png" alt="Blender Workspace">
+        <figcaption>Blender for Workspace Manipulation</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/Project images/Technical Project images/6 DOF robot/image3.png" alt="DH Plot in MATLAB">
+        <figcaption>DH Convention and Joints Limits to Plot Manipulator</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/Project images/Technical Project images/6 DOF robot/image4.png" alt="Path 1 Results">
+        <figcaption>Results of First Path</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/Project images/Technical Project images/6 DOF robot/image5.png" alt="Path 2 Results">
+        <figcaption>Results of Second Path</figcaption>
+      </figure>
+    </div>
 
-    To test real-world applicability, two paths were simulated and analyzed. Each trajectory included position and velocity profiles for all six joints. The joint space control strategies were evaluated by observing the resulting end-effector paths, error plots, and motion fluidity. These evaluations confirmed successful simulation with minimal error deviations.
+    <h2>Overview</h2>
+    <p>This project explores the comprehensive modeling and analysis of a 6-DOF industrial robotic arm through Fusion 360, Blender, and MATLAB. The process includes CAD design, workspace definition via rigging, kinematic configuration using DH parameters, and joint-level path planning for trajectory accuracy.</p>
 
-    The project culminated in a comprehensive understanding of the integration between mechanical design, animation tools, and robotics simulation platforms. It bridged conceptual design with practical kinematics, fostering key skills in robotics modeling, motion planning, simulation, and software interoperability.
-  </p>
-</section>
+    <h2>Project Description</h2>
+    <p>
+      This project involved the end-to-end design and simulation of a six-degrees-of-freedom (6-DOF) industrial robotic arm. The initial mechanical structure was developed in Fusion 360, focusing on realistic proportions, motion ranges, and mounting configurations.
+    </p>
+    <p>
+      Blender was used for workspace manipulation and rigging, while MATLAB’s Robotics Toolbox modeled forward kinematics using the Denavit-Hartenberg convention. Two simulated paths were analyzed for joint behavior and end-effector accuracy, showing minimal error.
+    </p>
 
-    <section>
-      <h2>Tools Used</h2>
-      <ul>
-        <li>Autodesk Fusion 360</li>
-        <li>Blender</li>
-        <li>MATLAB Robotics Toolbox</li>
-        <li>Python for data visualization</li>
-      </ul>
-    </section>
+    <h2>Tools Used</h2>
+    <ul>
+      <li>Autodesk Fusion 360</li>
+      <li>Blender</li>
+      <li>MATLAB Robotics Toolbox</li>
+      <li>Python for Data Visualization</li>
+    </ul>
 
-    <section>
-      <h2>Skills Achieved</h2>
-      <ul>
-        <li>3D CAD Design and Modeling</li>
-        <li>Forward and Inverse Kinematics</li>
-        <li>Trajectory Planning and Path Simulation</li>
-        <li>Joint Position & Velocity Analysis</li>
-      </ul>
-    </section>
+    <h2>Skills Achieved</h2>
+    <ul>
+      <li>3D CAD Design and Modeling</li>
+      <li>Forward and Inverse Kinematics</li>
+      <li>Trajectory Planning and Path Simulation</li>
+      <li>Joint Position & Velocity Analysis</li>
+    </ul>
 
-    <section>
-      <h2>Conclusion</h2>
-      <p>This robotic arm project provided hands-on experience in integrating design and simulation platforms for complete kinematic analysis. The approach enabled insight into joint performance under varying paths and built foundational expertise in robotics simulation environments.</p>
-    </section>
+    <h2>Conclusion</h2>
+    <p>This project offered hands-on experience in integrating design and simulation platforms for full kinematic analysis, helping to understand robotic joint behavior and enhancing simulation proficiency.</p>
 
-    <section>
-      <h2>Project Images</h2>
-      <div class="image-gallery">
-        <figure>
-          <img src="assets/Project images/Technical Project images/6 DOF robot/image1.png" alt="Design of industrial robot using Fusion 360">
-          <figcaption>Design of Industrial Robot using Fusion 360</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Project images/Technical Project images/6 DOF robot/image2.png" alt="Blender for Workspace Manipulation">
-          <figcaption>Blender for Workspace Manipulation</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Project images/Technical Project images/6 DOF robot/image3.png" alt="DH Convention and Joints Limits to Plot Manipulator">
-          <figcaption>DH Convention and Joints Limits to Plot Manipulator</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Project images/Technical Project images/6 DOF robot/image4.png" alt="Results of First Path">
-          <figcaption>Results of First Path</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Project images/Technical Project images/6 DOF robot/image5.png" alt="Results of Second Path">
-          <figcaption>Results of Second Path</figcaption>
-        </figure>
-      </div>
-    </section>
+    <!-- Back link -->
+    <a href="technical-projects.html" class="back-link"><i class="fas fa-arrow-left"></i> View All Technical Projects</a>
   </div>
-</body>
-<!-- Modal Viewer -->
+
+  <footer>
+    © 2025 Praveen Kilaru. All rights reserved.
+  </footer>
+
+  <!-- Modal Viewer -->
   <div class="modal" id="imgModal">
     <span class="close" onclick="closeModal()">&times;</span>
     <span class="prev" onclick="changeImg(-1)">&#10094;</span>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Performance Analysis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f7fa;
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    header {
+      background: #2c3e50;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      color: white;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background-color: #4dd0e1;
+      border-radius: 50%;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.2);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      text-align: center;
+      color: #12355b;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #12355b;
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #666;
+      font-style: italic;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #12355b;
+      text-decoration: none;
+      border: 2px solid #4dd0e1;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: #4dd0e1;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 40px 10px;
+      color: #888;
+      background-color: #eaeff5;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><div class=""></div> Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 data-aos="fade-down">🚗 Analysis of Vehicle Performance Factors</h1>
+
+    <section class="gallery" data-aos="fade-up">
+      <figure><img src="assets/Project images/Math project images/project 2/image1.png" alt="Histogram"><figcaption>Histogram of Continuous Variables</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 2/image2.png" alt="Manufacturer Code Frequency"><figcaption>Frequency of Manufacturer Codes</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 2/image3.png" alt="Correlation Matrix"><figcaption>Correlation Matrix & Scatter Grid</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 2/image4.png" alt="Model 2 Interactions"><figcaption>Variable Interactions with Horsepower</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 2/image5.png" alt="Residual Plot"><figcaption>Polynomial Residual Plot</figcaption></figure>
+      <figure><img src="assets/Project images/Math project images/project 2/image6.png" alt="Q-Q and Influence"><figcaption>Q-Q and Cook’s Distance Plot</figcaption></figure>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Overview</h2>
+      <p>This project analyzes how vehicle specifications and emissions metrics affect performance, particularly horsepower, using EPA fuel economy data and regression modeling techniques including interaction and polynomial terms.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="100">
+      <h2>Project Description</h2>
+      <p>This project uses regression modeling to study the effect of features like engine displacement, gears, weight, and emissions on horsepower in EPA-tracked trucks. Different models were used (main effects, interaction terms, and polynomial) to identify predictors and evaluate model fit.</p>
+      <p>Adjusted R² of 0.8722 was achieved using refined predictors and diagnostics like VIF, residual analysis, and Cook’s Distance. Results can aid in optimizing vehicle performance and emissions strategy design.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="200">
+      <h2>Tools Used</h2>
+      <ul>
+        <li>R & RStudio</li>
+        <li>EPA Fuel Economy Dataset</li>
+        <li>Regression Modeling (Polynomial, Interaction Terms)</li>
+        <li>Residual & Influence Diagnostics</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Skills Achieved</h2>
+      <ul>
+        <li>Regression Model Design & Tuning</li>
+        <li>Multicollinearity Analysis (VIF)</li>
+        <li>Residual Plot Interpretation</li>
+        <li>Model Validation & Diagnostics</li>
+      </ul>
+    </section>
+
+    <a href="math-projects.html" class="back-link"><i class="fas fa-arrow-left"></i> View All Math Projects</a>
+  </main>
+
+  <footer>
+    © 2025 Praveen Kilaru. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

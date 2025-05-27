@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awards & Interests | Praveen Kilaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f7fa;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 800;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+      transform: scale(1.2);
+    }
+
+    .resume-section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .resume-section-content {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      color: #0d47a1;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    li::marker {
+      color: #1976d2;
+    }
+
+    .award-list li::before {
+      content: '🏅 ';
+      margin-right: 6px;
+    }
+
+    .interest-list li::before {
+      content: '🎯 ';
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Praveen Kilaru</div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="education.html"><i class="fas fa-university"></i> Education</a>
+      <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="skills.html"><i class="fas fa-tools"></i> Skills</a>
+      <a href="awards.html"><i class="fas fa-award"></i> Awards</a>
+      <a href="assets/Resume/Praveen_resume_M.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </nav>
+  </header>
+
+  <section class="resume-section" id="awards" data-aos="fade-up">
+    <div class="resume-section-content">
+      <h2><i class="fas fa-award"></i> Awards & Interests</h2>
+
+      <div class="mb-4">
+        <h4><i class="fas fa-trophy"></i> Awards & Achievements</h4>
+        <ul class="award-list">
+          <li>Disaster Management Award – UAE Recognition for COVID Rapid Response Team (2021)</li>
+          <li>Finalist – APSCHE Excellence Awards (2022) – Community Service Category</li>
+          <li>Certificate of Excellence – ISSC for Inclusive Leadership and Service (2024)</li>
+          <li>Ocean Cleanup Drive Lead – State Government Recognition with Bhumi Organization (2021)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4><i class="fas fa-heart"></i> Interests</h4>
+        <ul class="interest-list">
+          <li>Robotics and Mechatronics</li>
+          <li>3D Printing & Rapid Prototyping</li>
+          <li>DIY Electronics Projects</li>
+          <li>Formula 1 and Technical Documentaries</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

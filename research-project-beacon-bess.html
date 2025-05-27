@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design and Development of Tensile Testing Machine</title>
+  <title>Beacon Solar + BESS | Praveen Kilaru</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       background: #f4f7fa;
       color: #2c3e50;
       margin: 0;
+      scroll-behavior: smooth;
     }
+
     header {
       background: #2c3e50;
       padding: 20px 50px;
@@ -27,6 +32,7 @@
       z-index: 1000;
       color: white;
     }
+
     .logo {
       font-size: 26px;
       font-weight: 800;
@@ -34,12 +40,14 @@
       align-items: center;
       gap: 10px;
     }
+
     .dot {
       width: 14px;
       height: 14px;
       background-color: #4dd0e1;
       border-radius: 50%;
     }
+
     nav a {
       margin-left: 30px;
       color: white;
@@ -51,88 +59,106 @@
       align-items: center;
       gap: 6px;
     }
+
     nav a:hover {
       color: #4dd0e1;
       transform: scale(1.2);
     }
+
     main {
-      max-width: 1000px;
+      max-width: 950px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 80px 30px;
     }
+
     h1 {
       font-size: 2.6rem;
       font-weight: 800;
-      text-align: center;
       color: #12355b;
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 30px;
     }
+
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: #12355b;
-      margin-top: 50px;
+      margin-top: 60px;
       margin-bottom: 15px;
     }
+
     p, li {
       font-size: 1.05rem;
+      line-height: 1.8;
       color: #444;
-      line-height: 1.7;
     }
+
     ul {
       padding-left: 20px;
+      margin-bottom: 20px;
     }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin-bottom: 40px;
     }
+
     figure {
       margin: 0;
       text-align: center;
     }
+
     figure img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
+
     figcaption {
       font-size: 0.9rem;
       margin-top: 10px;
-      color: #666;
+      color: #777;
       font-style: italic;
     }
+
     .back-link {
-      display: inline-block;
+      display: block;
+      text-align: center;
       margin-top: 50px;
       font-weight: 600;
       font-size: 1.1rem;
       color: #12355b;
       text-decoration: none;
-      border: 2px solid #4dd0e1;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
     }
+
     .back-link:hover {
-      background-color: #4dd0e1;
-      color: white;
-      transform: scale(1.05);
+      text-decoration: underline;
+      color: #4dd0e1;
     }
+
     footer {
+      background: #eaeff5;
       text-align: center;
-      font-size: 0.9rem;
-      padding: 40px 10px;
-      color: #888;
-      background-color: #eaeff5;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #666;
+      border-top: 1px solid #ccc;
       margin-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo"><div class=""></div> Kilaru Praveen</div>
+    <div class="logo"><div class=""></div> Praveen Kilaru</div>
     <nav>
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
       <a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a>
@@ -145,73 +171,66 @@
   </header>
 
   <main>
-    <h1 data-aos="fade-down">🧪 Design and Development of Tensile Testing Machine</h1>
+    <h1 data-aos="fade-down">☀️ Beacon Solar Project + BESS</h1>
 
     <section class="gallery" data-aos="fade-up">
       <figure>
-        <img src="assets/Project images/Technical Project images/Tensile testing images/image1.png" alt="CAD Model">
-        <figcaption>CAD Model (SolidWorks)</figcaption>
+        <img src="assets/Project images/Research project images/project 2/image1.png" alt="Beacon Solar PV Field" />
+        <figcaption>Beacon Solar Array – Utility-Scale PV Installation</figcaption>
       </figure>
       <figure>
-        <img src="assets/Project images/Technical Project images/Tensile testing images/image2.png" alt="Arduino Circuit">
-        <figcaption>Arduino Circuit Setup</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/Project images/Technical Project images/Tensile testing images/image3.png" alt="Working Prototype">
-        <figcaption>Working Prototype (Assembled View)</figcaption>
+        <img src="assets/Project images/Research project images/project 2/image2.png" alt="Beacon BESS Layout" />
+        <figcaption>Battery Energy Storage System (BESS) Layout</figcaption>
       </figure>
     </section>
 
     <section data-aos="fade-up">
-      <h2>Project Summary</h2>
-      <p>This project focuses on the design and development of a cost-effective tensile testing machine using SolidWorks, Arduino UNO, and a 3D-printed frame. It tests tensile strength of 3D-printed PLA and ABS samples, replicating basic UTM functionality for educational use.</p>
+      <h2>Overview</h2>
+      <p>
+        This project analyzes the LADWP’s Beacon Solar + BESS deployment in the Mojave Desert, highlighting lithium-ion battery integration, system capacity, operational metrics, and sustainability insights for future grid-scale renewable storage.
+      </p>
     </section>
 
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" data-aos-delay="100">
       <h2>Project Description</h2>
-      <p>Designed for modularity and easy manufacturing using PLA/ABS, the machine includes:</p>
-      <ul>
-        <li>5kg Load Cell with HX711 for force sensing</li>
-        <li>Arduino UNO for control and data acquisition</li>
-        <li>NEMA 17 stepper motor for fixture motion</li>
-        <li>3D printed structural and clamping components</li>
-      </ul>
-      <p>The Arduino was programmed for real-time force measurement and consistent strain control. The results were validated by plotting stress-strain behavior of tested specimens.</p>
+      <p>
+        This project evaluates LADWP's Beacon Solar and Battery Energy Storage System (BESS), featuring a 250 MW solar array and 20 MW / 80 MWh lithium-ion storage. Analysis includes battery configuration, inverter behavior, and charge cycles.
+      </p>
+      <p>
+        It compares performance with Tesla's Hornsdale Reserve and proposes AI grid control, hydrogen storage, and modular scalability for future resilience.
+      </p>
     </section>
 
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" data-aos-delay="200">
       <h2>Tools Used</h2>
       <ul>
-        <li>SolidWorks (CAD modeling)</li>
-        <li>Arduino IDE (programming)</li>
-        <li>HX711, Load Cell, NEMA 17 Motor</li>
-        <li>Fusion360 for 3D printing</li>
+        <li>Technical Data Review (LADWP & DOE)</li>
+        <li>BESS Configuration Analysis</li>
+        <li>Performance Benchmarking</li>
+        <li>Policy & Sustainability Frameworks</li>
       </ul>
     </section>
 
-    <section data-aos="fade-up">
-      <h2>Skills Gained</h2>
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Skills Achieved</h2>
       <ul>
-        <li>Mechanical Design & Assembly</li>
-        <li>Embedded Systems Programming</li>
-        <li>Sensor Calibration & Data Logging</li>
-        <li>Stress-Strain Testing Methodology</li>
+        <li>Battery Storage Analysis</li>
+        <li>Grid-Scale Integration</li>
+        <li>Lifecycle and Recycling Strategy</li>
+        <li>Sustainable Energy Planning</li>
       </ul>
     </section>
 
-    <section data-aos="fade-up">
-      <h2>Conclusion</h2>
-      <p>The low-cost machine successfully enables basic material strength testing in academic settings. Its customizable design is ideal for hands-on engineering education and prototyping labs.</p>
-    </section>
-
-    <a href="technical-projects.html" class="back-link"><i class="fas fa-arrow-left"></i> View All Technical Projects</a>
+    <a href="research-projects.html" class="back-link">&larr; Back to Research Projects</a>
   </main>
 
   <footer>
-    © 2025 Praveen kilaru. All rights reserved.
+    © 2025 Praveen Kilaru. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
